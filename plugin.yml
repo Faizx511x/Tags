@@ -1,0 +1,14 @@
+---
+name: Tags
+version: 1.0.0
+main: FaizDev\Tags\Main
+api: [4.0.0]
+author: FaizDev
+website: https://github.com/FaizDev
+description: Liven up your server with Tags
+
+permissions:
+  tags.use:
+    default: op
+    description: Permissions to use Tags
+...
