@@ -71,7 +71,7 @@ class Main extends PluginBase implements Listener
 
 	public function onDataPacketSendEvent(DataPacketSendEvent $event) : void
 	{
-		$pk = $event->getNetworkSession()->getPacket();
+		$pk = $event::getPackets() as $packet;
 		if ($pk instanceof TextPacket) {
 			$pattern = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
 			$replacement = "%$1";
