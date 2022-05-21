@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener
 			}
 			if (strrchr($message, $syntax) == true) {
 				$player->sendMessage("{WARN}§c You do not have permission to use the Tags!");
-				$event->cancel();
+				$event->setCancelled();
 			}
 		} else {
 			$search = self::Syntax;
