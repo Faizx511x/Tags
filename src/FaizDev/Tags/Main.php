@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 use ReflectionClass;
 use pocketmine\resourcepacks\ZippedResourcePack;
 
-use pocketmine\event\server\DataPacketSendEvent::getPacket();
+use pocketmine\event\server\DataPacketSendEvent;
 use pocketmine\network\mcpe\protocol\TextPacket;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 
@@ -71,7 +71,7 @@ class Main extends PluginBase implements Listener
 
 	public function onDataPacketSendEvent(DataPacketSendEvent $event) : void
 	{
-		$pk = $event->getPacket();
+		$pk = $event::getPacket();
 		if ($pk instanceof TextPacket) {
 			$pattern = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
 			$replacement = "%$1";
