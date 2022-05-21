@@ -10,7 +10,7 @@ use pocketmine\plugin\PluginBase;
 use ReflectionClass;
 use pocketmine\resourcepacks\ZippedResourcePack;
 
-use pocketmine\event\server\DataPacketSendEvent::getPacket()
+use pocketmine\event\server\DataPacketSendEvent::getPacket();
 use pocketmine\network\mcpe\protocol\TextPacket;
 use pocketmine\event\player\PlayerCommandPreprocessEvent;
 
