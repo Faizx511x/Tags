@@ -5,5 +5,5 @@ branches:
 projects:
   Tags:
     path: ""
-    lint: true
+    lint: false
 ...
