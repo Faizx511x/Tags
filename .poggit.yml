@@ -5,4 +5,5 @@ branches:
 projects:
   Tags:
     path: ""
+    lints: false
 ...
