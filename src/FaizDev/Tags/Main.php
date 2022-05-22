@@ -57,7 +57,7 @@ class Main extends PluginBase implements Listener
 			}
 			if (strrchr($message, $syntax) == true) {
 				$player->sendMessage("{WARN}§c You do not have permission to use the Tags!");
-				$event->setCancelled();
+				$event->cancel();
 			}
 		} else {
 			$search = self::Syntax;
@@ -71,7 +71,7 @@ class Main extends PluginBase implements Listener
 
 	public function onDataPacketSendEvent(DataPacketSendEvent $event) : void
 	{
-		$pk = $event::getPacket();
+		$pk = $event->getPacket();
 		if ($pk instanceof TextPacket) {
 			$pattern = "/%*(([a-z0-9_]+\.)+[a-z0-9_]+)/i";
 			$replacement = "%$1";
